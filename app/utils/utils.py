@@ -15,18 +15,17 @@ ABOUT_ME='''Бот ideas
 последнее обновление: 22 марта 2025 года
 '''
 
-def create_profile_message(user: dict ={}):
-    USER_MESSAGE="Тестовый текст"
+def create_profile_message(user: dict):
+    USER_MESSAGE = "Тестовый текст"
     if user:
-        USER_MESSAGE = f"""привет,  {user["name"]}!
-    
-Сейчас: {datetime.detetime.now().strftime("%d/%m/%Y, %H:%M:%S")}
+        USER_MESSAGE = f"""Привет, {user["name"]}! 🥋
 
-У вас на балансе {user["balance"]} руб
+Сейчас: {datetime.datetime.now().strftime("%d/%m/%Y, %H:%M:%S")} ⏳
+
+У вас на балансе: {user["balance"]} руб 💵
     """
-
         if user["id"] in ADMINS:
             USER_MESSAGE += """
-
-вы обладаете правами администратора!"""
+            
+Вы обладаете правами администратора!"""
     return USER_MESSAGE

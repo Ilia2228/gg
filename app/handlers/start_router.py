@@ -29,4 +29,4 @@ async def cmd_start_2(message: Message):
 
 @start_router.message(F.text == "О нас")
 async def print_about_me_message(message: Message):
-    await message.answer(ABOUT_ME)
+    await message.answer(ABOUT_ME) 

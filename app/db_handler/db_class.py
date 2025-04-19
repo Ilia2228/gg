@@ -13,7 +13,7 @@ def create_connection():
 
 
 def create_user(user_id: int,
-                full_name: str = None):
+                full_name: str):
     conn = create_connection()
     cursor = conn.cursor()
     
@@ -38,4 +38,4 @@ full_name, balance, create_at, update_at)
     conn.commit()
     return True
 
-create_user(1, "p1n0k10")
+create_user(1, "ilia4321")
